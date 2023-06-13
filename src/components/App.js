@@ -1,22 +1,16 @@
 import React, { useState } from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Avatar from "@mui/material/Avatar";
-import Grid from "@mui/material/Grid";
-import "./App.css";
-import Fretboard from "../../Fretboard/Fretboard";
-import TuningForm from "../TuningForm";
-import { Button } from "@mui/material";
+import { AppBar, Box, Toolbar, Typography, Avatar } from "@mui/material";
+import Fretboard from "./Fretboard";
+import TuningForm from "./TuningForm";
 
 const App = () => {
+  //Get tuning from Tuning Form
   const [dTuning, setTuning] = useState("");
   const getTuning = (data) => {
     setTuning(data);
     console.log(dTuning);
   };
-
+  //Default tuning
   const tuning = [
     [
       "E",
@@ -163,6 +157,7 @@ const App = () => {
       "C#",
     ],
   ];
+  //Render main interface
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">

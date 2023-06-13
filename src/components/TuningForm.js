@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
+import React from "react";
+import { Box, Grid, Button } from "@mui/material";
 import Input from "./Input";
+
+//Form to handle tuning inputs
 
 const TuningForm = ({ sendTuning }) => {
   let strings = 6;
@@ -22,6 +22,7 @@ const TuningForm = ({ sendTuning }) => {
     sendTuning(notes);
   };
 
+  //Gets array of strings containing array of notes based on tuning and number of frets
   function getNotes(tuning, numNotes) {
     let strings = new Array(6);
     for (let i = 0; i < 6; i++) {
@@ -36,6 +37,7 @@ const TuningForm = ({ sendTuning }) => {
     return strings;
   }
 
+  //Gets the next note
   function nextNote(note) {
     if (
       note == "C" ||
@@ -56,6 +58,7 @@ const TuningForm = ({ sendTuning }) => {
     return nextChar(note);
   }
 
+  //Gets the next letter of the alphabet
   function nextChar(char) {
     var res =
       char == "z"

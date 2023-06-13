@@ -1,7 +1,6 @@
 import React from "react";
 import { styled } from "@mui/system";
-import Note from "../components/Note.js";
-import Input from "../components/TuningForm.js";
+import Note from "./Note.js";
 
 const GridContainer = styled("div")({
   display: "grid",
